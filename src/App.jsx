@@ -1,33 +1,75 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+        <div className={"bg-black min-h-screen flex items-center"}>
+            <div className={"max-w-screen-sm bg-off-white lg:max-w-screen-lg lg:w-full mx-auto"}>
+
+                <header>
+
+                    <nav>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">New</a></li>
+                            <li><a href="#">Popular</a></li>
+                            <li><a href="#">Trending</a></li>
+                            <li><a href="#">Categories</a></li>
+                        </ul>
+                    </nav>
+                </header>
+
+                <main>
+                    <div>
+                        <h1>The Bright Future of Web 3.0?</h1>
+                        <div>
+                            <p>
+                                We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people.
+                                But is it really fulfilling its promise?
+                            </p>
+                            <button>
+                                <span>Read more</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>New</h2>
+                        <div>
+                            <h3>Hydrogen VS Electric Cars</h3>
+                            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+                        </div>
+                        <div>
+                            <h3>The Downsides of AI Artistry</h3>
+                            <p>What are the possible adverse effects of on-demand AI image generation?</p>
+                        </div>
+                        <div>
+                            <h3>Is VC Funding Drying Up?</h3>
+                            <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+                        </div>
+                    </div>
+                </main>
+
+                <footer>
+                    <div>
+                        <h2>01</h2>
+                        <h3>Reviving Retro PCs</h3>
+                        <p>What happens when old PCs are given modern upgrades?</p>
+                    </div>
+                    <div>
+                        <h2>02</h2>
+                        <h3>Top 10 Laptops of 2022</h3>
+                        <p>Our best picks for various needs and budgets.</p>
+                    </div>
+                    <div>
+                        <h2>03</h2>
+                        <h3>The Growth of Gaming</h3>
+                        <p>How the pandemic has sparked fresh opportunities.</p>
+                    </div>
+
+                </footer>
+            </div>
+
+        </div>
     </>
   )
 }
