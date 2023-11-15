@@ -1,6 +1,8 @@
 import web3Desktop from '/src/assets/images/image-web-3-desktop.jpg'
 import web3Mobile from '/src/assets/images/image-web-3-mobile.jpg'
 import logo from '/src/assets/images/logo.svg'
+import iconMenu from '/src/assets/images/icon-menu.svg'
+import iconMenuClose from '/src/assets/images/icon-menu-close.svg'
 function App() {
 
   return (
@@ -8,11 +10,14 @@ function App() {
         <div className={"bg-black min-h-screen flex items-center"}>
             <div className={"max-w-screen-sm bg-off-white lg:max-w-screen-lg lg:w-full mx-auto font-Inter lg:px-[163px]"}>
 
-                <header className={"lg:flex lg:items-center"}>
+                <header className={"flex items-center"}>
                     <img src={logo} alt={""} />
 
-                    <nav className={"lg:ml-auto"}>
-                        <ul className={"lg:flex lg:gap-x-[36px] text-dark-grayish-blue"}>
+                    <nav className={"ml-auto "}>
+                        <button className={"lg:hidden"}>
+                            <img className={""} src={iconMenu} alt />
+                        </button>
+                        <ul className={"hidden lg:flex lg:gap-x-[36px] text-dark-grayish-blue"}>
                             <li><a href="#">Home</a></li>
                             <li><a href="#">New</a></li>
                             <li><a href="#">Popular</a></li>
