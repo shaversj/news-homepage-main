@@ -1,15 +1,18 @@
-
+import web3Desktop from '/src/assets/images/image-web-3-desktop.jpg'
+import web3Mobile from '/src/assets/images/image-web-3-mobile.jpg'
+import logo from '/src/assets/images/logo.svg'
 function App() {
 
   return (
     <>
         <div className={"bg-black min-h-screen flex items-center"}>
-            <div className={"max-w-screen-sm bg-off-white lg:max-w-screen-lg lg:w-full mx-auto"}>
+            <div className={"max-w-screen-sm bg-off-white lg:max-w-screen-lg lg:w-full mx-auto font-Inter lg:px-[163px]"}>
 
-                <header>
+                <header className={"lg:flex lg:items-center"}>
+                    <img src={logo} alt={""} />
 
-                    <nav>
-                        <ul>
+                    <nav className={"lg:ml-auto"}>
+                        <ul className={"lg:flex lg:gap-x-[36px] text-dark-grayish-blue"}>
                             <li><a href="#">Home</a></li>
                             <li><a href="#">New</a></li>
                             <li><a href="#">Popular</a></li>
@@ -20,6 +23,10 @@ function App() {
                 </header>
 
                 <main>
+                    {/*<picture>*/}
+                    {/*    <source className={""} srcSet={web3Desktop} media="(min-width: 1440px)" />*/}
+                    {/*    <img className={""} src={web3Mobile} alt="" />*/}
+                    {/*</picture>*/}
                     <div>
                         <h1>The Bright Future of Web 3.0?</h1>
                         <div>
