@@ -3,15 +3,18 @@ import web3Mobile from '/src/assets/images/image-web-3-mobile.jpg'
 import logo from '/src/assets/images/logo.svg'
 import iconMenu from '/src/assets/images/icon-menu.svg'
 import iconMenuClose from '/src/assets/images/icon-menu-close.svg'
+import laptop from '/src/assets/images/image-top-laptops.jpg'
+import retropc from '/src/assets/images/image-retro-pcs.jpg'
+import gaming from '/src/assets/images/image-gaming-growth.jpg'
 function App() {
 
   return (
     <>
         <div className={"bg-black min-h-screen flex items-center"}>
-            <div className={"max-w-screen-sm bg-off-white lg:max-w-screen-lg lg:w-full mx-auto font-Inter lg:px-[163px]"}>
+            <div className={"px-[15px] max-w-screen-sm bg-off-white lg:max-w-screen-lg lg:w-full mx-auto font-Inter lg:px-[163px]"}>
 
-                <header className={"flex items-center"}>
-                    <img src={logo} alt={""} />
+                <header className={"pt-5 flex items-center"}>
+                    <img className={"sm:w-[48px] h-[32px]"} src={logo} alt={""} />
 
                     <nav className={"ml-auto "}>
                         <button className={"lg:hidden"}>
@@ -28,54 +31,70 @@ function App() {
                 </header>
 
                 <main>
-                    {/*<picture>*/}
-                    {/*    <source className={""} srcSet={web3Desktop} media="(min-width: 1440px)" />*/}
-                    {/*    <img className={""} src={web3Mobile} alt="" />*/}
-                    {/*</picture>*/}
-                    <div>
-                        <h1>The Bright Future of Web 3.0?</h1>
-                        <div>
-                            <p>
+                    <picture className={""}>
+                        <source className={""} srcSet={web3Desktop} media="(min-width: 1440px)" />
+                        <img className={"pt-7"} src={web3Mobile} alt="" />
+                    </picture>
+                    <div className={"pt-6"}>
+                        <h1 className={"text-[42px] leading-10 font-bold"}>The Bright Future of Web 3.0?</h1>
+                        <div className={"pt-4"}>
+                            <p className={"text-dark-grayish-blue text-[15px]"}>
                                 We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people.
                                 But is it really fulfilling its promise?
                             </p>
-                            <button>
-                                <span>Read more</span>
+                            <button className={"bg-soft-red px-8 py-2 mt-4"}>
+                                <span className={"uppercase text-[15px] tracking-[.2rem] text-off-white"}>Read more</span>
                             </button>
                         </div>
                     </div>
-                    <div>
-                        <h2>New</h2>
-                        <div>
-                            <h3>Hydrogen VS Electric Cars</h3>
-                            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+                    <div className={"px-[20px] bg-very-dark-blue mt-14"}>
+                        <h2 className={"pt-5 text-soft-orange text-[28px] font-semibold"}>New</h2>
+                        <div className={"divide-y-[.01px] [&>div]:pt-5 divide-dark-grayish-blue"}>
+                            <div className={"pb-5 space-y-2"}>
+                                <h3 className={"text-white font-semibold text-[21px]"}>Hydrogen VS Electric Cars</h3>
+                                <p className={"text-grayish-blue text-[16px] font-thin"}>Will hydrogen-fueled cars ever catch up to EVs?</p>
+                            </div>
+                            <div className={"pb-5 space-y-2"}>
+                                <h3 className={"text-white font-semibold text-[21px]"}>The Downsides of AI Artistry</h3>
+                                <p className={"text-grayish-blue text-[16px] font-thin"}>What are the possible adverse effects of on-demand AI image generation?</p>
+                            </div>
+                            <div className={"pb-5 space-y-2"}>
+                                <h3 className={"text-white font-semibold text-[21px]"}>Is VC Funding Drying Up?</h3>
+                                <p className={"text-grayish-blue text-[16px] font-thin"}>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+                            </div>
                         </div>
-                        <div>
-                            <h3>The Downsides of AI Artistry</h3>
-                            <p>What are the possible adverse effects of on-demand AI image generation?</p>
-                        </div>
-                        <div>
-                            <h3>Is VC Funding Drying Up?</h3>
-                            <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
-                        </div>
+
                     </div>
                 </main>
 
-                <footer>
-                    <div>
-                        <h2>01</h2>
-                        <h3>Reviving Retro PCs</h3>
-                        <p>What happens when old PCs are given modern upgrades?</p>
+                <footer className={"pt-14 space-y-8 pb-20"}>
+                    <div className={"flex gap-x-4"}>
+                        <img className={"w-[100px] aspect-[3/4] "} src={retropc} alt={""} />
+                        <div className={"space-y-3"}>
+                            <h2 className={"text-3xl font-semibold text-grayish-blue"}>01</h2>
+                            <h3 className={"font-bold text-xl"}>Reviving Retro PCs</h3>
+                            <p className={"text-dark-grayish-blue"}>What happens when old PCs are given modern upgrades?</p>
+                        </div>
+
                     </div>
-                    <div>
-                        <h2>02</h2>
-                        <h3>Top 10 Laptops of 2022</h3>
-                        <p>Our best picks for various needs and budgets.</p>
+                    <div className={"flex gap-x-4"}>
+                        <img className={"w-[100px] aspect-[3/4]"} src={laptop} alt={""} />
+                        <div className={"space-y-3"}>
+                            <h2 className={"text-3xl font-semibold text-grayish-blue"}>02</h2>
+                            <h3 className={"font-bold text-[18px]"}>Top 10 Laptops of 2022</h3>
+                            <p className={"text-dark-grayish-blue"}>Our best picks for various needs and budgets.</p>
+                        </div>
+
                     </div>
-                    <div>
-                        <h2>03</h2>
-                        <h3>The Growth of Gaming</h3>
-                        <p>How the pandemic has sparked fresh opportunities.</p>
+                    <div className={"flex gap-x-4"}>
+
+                        <img className={"w-[100px] aspect-[3/4]"} src={gaming} alt={""} />
+                        <div className={"space-y-3"}>
+                            <h2 className={"text-3xl font-semibold text-grayish-blue"}>03</h2>
+                            <h3 className={"font-bold text-[18px]"}>The Growth of Gaming</h3>
+                            <p className={"text-dark-grayish-blue text-[15px]"}>How the pandemic has sparked fresh opportunities.</p>
+                        </div>
+
                     </div>
 
                 </footer>
