@@ -11,9 +11,9 @@ function App() {
   return (
     <>
         <div className={"bg-black min-h-screen flex items-center"}>
-            <div className={"px-[15px] max-w-screen-sm bg-off-white lg:max-w-screen-lg lg:w-full mx-auto font-Inter lg:px-[163px]"}>
+            <div className={"px-[15px] max-w-screen-sm bg-off-white lg:max-w-screen-lg lg:max-h-[1024px] lg:w-full mx-auto font-Inter lg:px-[163px]"}>
 
-                <header className={"pt-5 flex items-center"}>
+                <header className={"pt-5 flex items-center lg:pt-[89px]"}>
                     <img className={"sm:w-[48px] h-[32px]"} src={logo} alt={""} />
 
                     <nav className={"ml-auto "}>
@@ -30,14 +30,16 @@ function App() {
                     </nav>
                 </header>
 
-                <main>
-                    <picture className={""}>
+                <main className={"lg:grid lg:grid-cols-[auto,auto] lg:grid-rows-[auto,auto]"}>
+                    <picture className={"lg:col-start-1 lg:col-end-3"}>
                         <source className={""} srcSet={web3Desktop} media="(min-width: 1440px)" />
-                        <img className={"pt-7"} src={web3Mobile} alt="" />
+                        <img className={"pt-7 lg:pt-0"} src={web3Mobile} alt="" />
                     </picture>
-                    <div className={"pt-6"}>
+                    <div className={"pt-6 lg:row-start-2"}>
                         <h1 className={"text-[42px] leading-10 font-bold"}>The Bright Future of Web 3.0?</h1>
-                        <div className={"pt-4"}>
+                    </div>
+                    <div className={"lg:row-start-2"}>
+                        <div className={"pt-4 lg:col-start-2"}>
                             <p className={"text-dark-grayish-blue text-[15px]"}>
                                 We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people.
                                 But is it really fulfilling its promise?
@@ -47,7 +49,8 @@ function App() {
                             </button>
                         </div>
                     </div>
-                    <div className={"px-[20px] bg-very-dark-blue mt-14"}>
+
+                    <div className={"px-[20px] bg-very-dark-blue mt-14 lg:col-start-3 lg:row-span-2 lg:mt-0"}>
                         <h2 className={"pt-5 text-soft-orange text-[28px] font-semibold"}>New</h2>
                         <div className={"divide-y-[.01px] [&>div]:pt-5 divide-dark-grayish-blue"}>
                             <div className={"pb-5 space-y-2"}>
@@ -67,7 +70,7 @@ function App() {
                     </div>
                 </main>
 
-                <footer className={"pt-14 space-y-8 pb-20"}>
+                <footer className={"pt-14 space-y-8 pb-20 lg:flex"}>
                     <div className={"flex gap-x-4"}>
                         <img className={"w-[100px] aspect-[3/4] "} src={retropc} alt={""} />
                         <div className={"space-y-3"}>
