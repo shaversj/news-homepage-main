@@ -11,7 +11,7 @@ const Header = () => {
         <img className={"sm:w-[48px] sm:h-[32px] lg:w-auto lg:h-auto"} src={logo} alt={"W Logo"} />
 
         <nav className={"ml-auto "}>
-          <button className={"lg:hidden"} type={"button"}>
+          <button className={"lg:hidden"} type={"button"} aria-label={"Open Menu"}>
             <img className={""} src={iconMenu} alt={""} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} />
           </button>
           <ul className={"hidden lg:flex lg:gap-x-[39px] text-dark-grayish-blue lg:font-light"}>
@@ -33,7 +33,7 @@ const Header = () => {
           </ul>
           {isMobileMenuOpen && (
             <div className={"min-h-screen bg-off-white w-[250px] absolute left-[6.5rem] top-[0.00rem]"}>
-              <button type={"button"} className={"ml-auto flex justify-end pt-6 pr-2"} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+              <button aria-label={"Close Menu"} type={"button"} className={"ml-auto flex justify-end pt-6 pr-2"} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
                 <FaX size={"2em"} />
               </button>
               <ul className={"space-y-4 text-dark-grayish-blue lg:font-light pl-5 pt-[86px]"}>
